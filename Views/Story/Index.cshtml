@@ -1,0 +1,13 @@
+﻿@{
+
+    ViewData["Title"] = "小说列表";
+}
+
+<h2>小说列表</h2>
+
+<ul>
+    @foreach (var item in ViewBag.ptlist)
+    {
+        <li><a asp-action="Detail" asp-route-id="@item.ID">@(((Story)item).Title)</a></li>
+    }
+</ul>
